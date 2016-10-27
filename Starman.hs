@@ -45,4 +45,5 @@ starman n = do
   word <- randomWord
   turn word ['-' | x <- word] n
 
+main :: IO ()
 main = starman 5
