@@ -1,13 +1,13 @@
 class Point a where
-    coord :: a -> (Float, Float)
+  coord :: a -> (Float, Float)
 
 data FloatPoint = FloatPoint Float Float
 instance Point FloatPoint where
-    coord (FloatPoint x y) = (x,y)
+  coord (FloatPoint x y) = (x,y)
 
 data IntPoint = IntPoint Int Int
 instance Point IntPoint where
-    coord (IntPoint x y) = (realToFrac x, realToFrac y)
+  coord (IntPoint x y) = (realToFrac x, realToFrac y)
 
 main :: IO ()
 main = do
